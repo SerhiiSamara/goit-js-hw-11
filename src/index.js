@@ -31,7 +31,7 @@ async function onSearchPhotos(e) {
   const {
     elements: { searchQuery },
   } = e.currentTarget;
-  if (searchQuery.value === '') {
+  if (!searchQuery.value.trim()) {
     onInfo(`Enter more inforvation.`);
     return;
   }
